@@ -1,0 +1,10 @@
+[package]
+name = "dyn-load-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dyn-load-api = { path = "../api" }
+
+[lib]
+crate-type = ["dylib"]

@@ -1,0 +1,2 @@
+#!/bin/bash
+cargo build && cp target/debug/libdyn_load_test.so test.plugin && cargo run
