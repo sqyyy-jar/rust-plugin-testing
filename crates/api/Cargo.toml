@@ -1,5 +1,5 @@
 [package]
-name = "dyn-load-api"
+name = "dyn-load"
 version = "0.1.0"
 edition = "2021"
 

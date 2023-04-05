@@ -11,20 +11,13 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "dyn-load"
 version = "0.1.0"
+
+[[package]]
+name = "dyn-load-impl"
+version = "0.1.0"
 dependencies = [
- "dyn-load-api",
+ "dyn-load",
  "libloading",
-]
-
-[[package]]
-name = "dyn-load-api"
-version = "0.1.0"
-
-[[package]]
-name = "dyn-load-test"
-version = "0.1.0"
-dependencies = [
- "dyn-load-api",
 ]
 
 [[package]]
@@ -35,6 +28,13 @@ checksum = "b67380fd3b2fbe7527a606e18729d21c6f3951633d0500574c4dc22d2d638b9f"
 dependencies = [
  "cfg-if",
  "winapi",
+]
+
+[[package]]
+name = "test-plugin"
+version = "0.1.0"
+dependencies = [
+ "dyn-load",
 ]
 
 [[package]]

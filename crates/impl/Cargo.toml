@@ -1,8 +1,8 @@
 [package]
-name = "dyn-load"
+name = "dyn-load-impl"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-dyn-load-api = { path = "../api" }
+dyn-load = { path = "../api" }
 libloading = "0.7.4"

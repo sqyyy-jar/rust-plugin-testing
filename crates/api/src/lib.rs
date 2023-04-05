@@ -1,3 +1,5 @@
 pub trait System {
-    fn get_num(&self) -> u64;
+    fn num(&self) -> u64;
 }
+
+pub trait Plugin {}
