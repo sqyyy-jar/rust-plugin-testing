@@ -1,14 +1,13 @@
-use dyn_load::{Plugin, System};
+use std::ffi::c_char;
 
-pub struct TestPlugin {}
+use dyn_load::Metadata;
 
-impl Plugin for TestPlugin {}
+static PLUGIN_METADATA: Metadata = Metadata {
+    name: "my-plugin".as_ptr() as *const c_char,
+    cli: false,
+};
 
 #[no_mangle]
-fn start(system: &dyn System) -> Box<dyn Plugin> {
-    println!("{}", system.num());
-    Box::new(TestPlugin {})
+pub fn get_metadata() -> &'static Metadata {
+    &PLUGIN_METADATA
 }
-
-#[no_mangle]
-fn destroy(_plugin: Box<dyn Plugin>) {}
